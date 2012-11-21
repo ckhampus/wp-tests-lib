@@ -7,7 +7,7 @@ error_reporting( E_ALL & ~E_DEPRECATED & ~E_STRICT );
 
 require_once 'PHPUnit/Autoload.php';
 
-$config_file_path = dirname( __FILE__ ) . '/../wp-tests-config.php';
+$config_file_path = WP_TESTS_CONFIG_PATH;
 
 /*
  * Globalize some WordPress variables, because PHPUnit loads this file inside a function
@@ -125,4 +125,4 @@ class WP_PHPUnit_TextUI_Command extends PHPUnit_TextUI_Command {
 			echo "Not running ajax tests... To execute these, use --group ajax." . PHP_EOL;
     }
 }
-new WP_PHPUnit_TextUI_Command( $_SERVER['argv'] );
+// new WP_PHPUnit_TextUI_Command( $_SERVER['argv'] );
